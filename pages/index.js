@@ -16,14 +16,20 @@ const Home = () => {
   return (
     <Provider client={client}>
       <Read baseModel='availabilities' params={params}>
-        {({ data, loading, error }) => {
+        {({ data, loading, error, refetch }) => {
           if (loading) return <div>Loading...</div>
-          if (error) return <div>Error...</div>
+          if (error) return (
+            <div>
+              <div>Error...</div>
+              <button onClick={refetch}>Reload</button>
+            </div>
+          )
           return (
             <div>
               {
                 data.map(a => <div>{ a.id }</div>)
               }
+              <button onClick={refetch}>Reload</button>
             </div>
           )
         }}
