@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "cinderblock": "^2.0.1",
     "dotenv": "^8.2.0",
     "lodash": "^4.17.15",
     "next": "9.2.1",
