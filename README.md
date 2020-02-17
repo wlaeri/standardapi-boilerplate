@@ -1,6 +1,6 @@
 # StandardAPI Boilerplate
 
-This is a boilerplate web application powered by [React](https://reactjs.org/), [Next.js](https://nextjs.org/), and [StandardAPI](https://github.com/waratuman/standardapi).
+This is a boilerplate web application powered by [React](https://reactjs.org/), [Next.js](https://nextjs.org/), [StandardAPI](https://github.com/waratuman/standardapi), and the [Priceline Design System](https://github.com/priceline/design-system/).
 
 ## Installation
 
@@ -16,7 +16,10 @@ $ yarn install && yarn dev
 * [StandardAPI Client Docs](https://github.com/wlaeri/standardapi-client)
 * [StandardAPI Docs](https://github.com/waratuman/standardapi)
 * [Next.js Docs](https://nextjs.org/docs/getting-started)
+* [Priceline Design System](https://github.com/priceline/design-system/)
+* [Knotel Cinderblock](https://github.com/knotel/cinderblock)
 * [React Docs](https://reactjs.org/docs/getting-started.html)
+* [styled-components](https://github.com/styled-components/styled-components)
 
 ## License
 

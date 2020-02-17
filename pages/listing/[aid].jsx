@@ -5,6 +5,8 @@ import { Provider, Read } from 'react-standardapi'
 import client from '../../components/client'
 import styled from 'styled-components'
 import _get from 'lodash/get'
+import { ThemeProvider } from 'pcln-design-system'
+import { theme } from 'cinderblock'
 
 const params = {
   include: {
@@ -24,26 +26,32 @@ const Listing = () => {
   const router = useRouter()
   const id = router.query.aid
   return (
-    <ListingContainer>
-      <Provider client={client}>
-        <Read baseModel='availabilities' params={{ ...params, id }}>
-          {({ data, loading, error, refetch }) => {
-            if (loading) return <div>Loading...</div>
-            if (error) return <div>Error :(</div>
+    <ThemeProvider theme={theme}>
+      <ListingContainer>
+        <Provider client={client}>
+          <Read baseModel='availabilities' params={{ ...params, id }}>
+            {({ data, loading, error, refetch }) => {
+              if (loading) return <div>Loading...</div>
+              if (error) return <div>Error :(</div>
 
-            const address = _get(data, 'space.building.address')
-            const { size, size_units, premise, id } = data
+              const address = _get(data, 'space.building.address')
+              const { size, size_units, premise, id } = data
+              const fullAddress = `${address.number} ${address.street} ${premise}`
 
-            return (
-              <div>
-                <h1>{ `${address.number} ${address.street} ${premise}` }</h1>
-                <button onClick={refetch}>Reload</button>
-              </div>
-            )
-          }}
-        </Read>
-      </Provider>
-    </ListingContainer>
+              return (
+                <div>
+                  <Head>
+                    <title>{ fullAddress }</title>
+                  </Head>
+                  <h1>{ fullAddress }</h1>
+                  <button onClick={refetch}>Reload</button>
+                </div>
+              )
+            }}
+          </Read>
+        </Provider>
+      </ListingContainer>
+    </ThemeProvider>
   )
 }
 

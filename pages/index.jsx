@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import Head from 'next/head'
 import { Provider, BatchedLoader } from 'react-standardapi'
+import { ThemeProvider, Flex, Heading, Button } from 'pcln-design-system'
+import { theme, Logo } from 'cinderblock'
 import client from '../components/client'
 import AvailabilityCard from '../components/AvailabilityCard'
 
@@ -23,29 +25,34 @@ const params = {
   }
 }
 
-const Home = () => {
-  return (
+const Home = () => (
+  <ThemeProvider theme={theme}>
     <Provider client={client}>
-      <Head title='Knotel Listings' />
+      <Head>
+        <title>Knotel Availabilities</title>
+      </Head>
+      <Flex alignItems="center">
+        <Logo />
+        <Heading ml={2}>Availabilities</Heading>
+      </Flex>
       <AppContainer>
-        <h1>Knotel Listings</h1>
         <BatchedLoader baseModel='availabilities' params={params} batchSize={5}>
           {({ data, error, fetchNextBatch }) => {
-            if (error) return <div>Error...</div>
+            if (error) return <Heading>Error...</Heading>
 
             return (
-              <div>
+              <Flex flexDirection="column">
                 {
                   data.map(a => <AvailabilityCard availability={a} /> )
                 }
-                <button onClick={fetchNextBatch}>Load More</button>
-              </div>
+                <Button onClick={fetchNextBatch}>Load More</Button>
+              </Flex>
             )
           }}
         </BatchedLoader>
       </AppContainer>
     </Provider>
-  )
-}
+  </ThemeProvider>
+)
 
 export default Home
