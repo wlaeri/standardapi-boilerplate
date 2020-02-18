@@ -19,9 +19,11 @@ const params = {
   include: {
     space: {
       building: {
+        photos: true,
         address: true
       }
-    }
+    },
+    photos: true
   }
 }
 
@@ -43,7 +45,7 @@ const Home = () => (
             return (
               <Flex flexDirection="column">
                 {
-                  data.map(a => <AvailabilityCard availability={a} /> )
+                  data.map(a => <AvailabilityCard availability={a} key={a.id} /> )
                 }
                 <Button onClick={fetchNextBatch}>Load More</Button>
               </Flex>

@@ -20,6 +20,8 @@ $ yarn install && yarn dev
 * [Knotel Cinderblock](https://github.com/knotel/cinderblock)
 * [React Docs](https://reactjs.org/docs/getting-started.html)
 * [styled-components](https://github.com/styled-components/styled-components)
+* [Bob Ross Client](https://github.com/wlaeri/bob-ross-client)
+* [Bob Ross Docs](https://github.com/malomalo/bob_ross)
 
 ## License
 
