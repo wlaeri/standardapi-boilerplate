@@ -1,0 +1,80 @@
+{
+  "page": {
+    "error": {
+      "couldntFind": "Couldn't find that one.",
+      "description": "Something isn’t quite right here. Please try that again.",
+      "title": "Error",
+      "tryAgain": "Try again from the start."
+    },
+    "index": {
+      "title": "Listings",
+      "description": "Listings"
+    },
+    "resources": {
+      "title": "Resources",
+      "description": "Resources"
+    },
+    "location": {
+      "title": "Listings for {{metro}}",
+      "description": {
+        "default": "Listings",
+        "amsterdam": "Listings in Amsterdam.",
+        "atlanta": "Listings in Atlanta.",
+        "berlin": "Listings in Berlin.",
+        "boston": "Listings in Boston.",
+        "delhi": "Listings in Delhi.",
+        "dublin": "Listings in Dublin.",
+        "london": "Listings in London.",
+        "losAngeles": "Listings in Los Angeles.",
+        "newYork": "Listings in New York.",
+        "paris": "Listings in Paris.",
+        "rioDeJaneiro": "Listings in Rio De Janeiro.",
+        "sanFrancisco": "Listings in San Francisco.",
+        "saoPaulo": "Listings in Sao Paulo.",
+        "toronto": "Listings in Toronto.",
+        "washingtonDC": "Listings in Washington D.C."
+      }
+    },
+    "space": {
+      "metaInfo": {
+        "backLink": "back to listings"
+      },
+      "about": {
+        "firstParagraph": "All Knotel spaces are tailored to the needs of each individual company by an in-house team of architects, interior designers, and workplace strategists. Our subscription model includes all branding, furniture, and IT needs in a single annual agreement.",
+        "secondParagraph": "Below are some resources to further explore about Knotel.",
+        "links": {
+          "lookBook": {
+            "text": "Design look book",
+            "description": "View beautiful, tailored workspaces"
+          },
+          "flex": {
+            "text": "Flex lease fact sheet",
+            "description": "Coworking vs flexible office: the difference defined"
+          },
+          "agile": {
+            "text": "Guide to agile real estate",
+            "description": "Learn about the industry’s increasing shift towards flexibility"
+          },
+          "lookInside": {
+            "text": "A look inside",
+            "description": "A fast-growing technology company needed an innovative office in the epicenter of San Francisco"
+          }
+        }
+      },
+      "aboutSpace": "About this space",
+      "banner": {
+        "description": "Checkout more spaces in New York City or any of our other markets.",
+        "label": "View more spaces",
+        "title": "Looking for more?"
+      },
+      "description": "{{location}} is a {{size}} {{measurementUnit}} office space available for flexible lease in {{submarket}}",
+      "details": "Details coming soon.",
+      "exploreSubmarket": "Explore {{submarket}}",
+      "floorplans": {
+        "title": "Sample floor plans"
+      },
+      "seats": "seats",
+      "similarSpaces": "Similar Spaces"
+    }
+  }
+}

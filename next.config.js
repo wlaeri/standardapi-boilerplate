@@ -9,5 +9,13 @@ let env = {}
 approvedKeys.map(key => env[key] = process.env[key])
 
 module.exports = {
-  env
+  env,
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ['@svgr/webpack'],
+    });
+
+    return config;
+  }
 }
