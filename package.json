@@ -11,7 +11,7 @@
     "bob-ross-client": "^1.0.1",
     "cinderblock": "^2.0.20",
     "dotenv": "^8.2.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "next": "9.2.1",
     "next-i18next": "^4.2.0",
     "pcln-design-system": "^3.2.0",
